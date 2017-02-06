@@ -37,3 +37,31 @@ class CaffeineTest < MiniTest::Test
     assert trevor.alertness > 0.9
   end
 end
+
+class EspressoTest < MiniTest::Test
+
+  def test_trying_to_make_espresso_my_bitch
+    bob = Human.new "Bob"
+    espresso = Coffee.new("Espresso", 1, 0.41)
+
+    bob.buy espresso
+    bob.drink!
+    assert espresso.empty?
+    assert bob.alertness > 0.4
+
+  end
+
+end
+
+class TeaTest < MiniTest::Test
+
+  def test_tea_time
+    goat = Human.new "Tom Brady"
+    tea = Tea.new("Tea", 3, 0.25)
+    goat.buy tea
+    3.times { goat.drink! }
+    assert tea.empty?
+    assert goat.alertness < 1.0
+  end
+
+end
