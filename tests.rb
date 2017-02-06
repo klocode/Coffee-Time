@@ -57,7 +57,7 @@ class TeaTest < MiniTest::Test
 
   def test_tea_time
     goat = Human.new "Tom Brady"
-    tea = Tea.new("Tea", 3, 0.25)
+    tea = Tea.new("Tea")
     goat.buy tea
     3.times { goat.drink! }
     assert tea.empty?
