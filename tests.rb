@@ -42,12 +42,12 @@ class EspressoTest < MiniTest::Test
 
   def test_trying_to_make_espresso_my_bitch
     bob = Human.new "Bob"
-    espresso = Coffee.new("Espresso", 1, 0.41)
+    espresso = Coffee.new("Espresso", 1, 0.4)
 
     bob.buy espresso
     bob.drink!
     assert espresso.empty?
-    assert bob.alertness > 0.4
+    assert bob.alertness > 0.3
 
   end
 
