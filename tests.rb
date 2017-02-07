@@ -62,6 +62,10 @@ class TeaTest < MiniTest::Test
     3.times { goat.drink! }
     assert tea.empty?
     assert goat.alertness < 1.0
+    goat.buy tea
+    3.times { goat.drink!}
+    assert goat.alertness > 1.0
+    #raising alertness past 1.0 by having to drink two different teas
   end
 
 end
